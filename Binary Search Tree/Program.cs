@@ -25,10 +25,10 @@ namespace Binary_Search_Tree
             obj.Size();
 
             //Search a Particular Node using Recursion
-            bool flag=obj.Search(110);
+            bool flag=obj.Search(63);
             if(!flag)
             {
-                Console.WriteLine("Could not find Data in BST");
+                Console.WriteLine("Could not find Data in BST!");
             }
         }
     }

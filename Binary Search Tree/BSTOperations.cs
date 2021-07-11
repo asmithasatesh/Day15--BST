@@ -77,7 +77,7 @@ namespace Binary_Search_Tree
 
             if (current.Equals(data))
             {
-                Console.WriteLine("Found " + current+" in BST");
+                Console.WriteLine("Found " + current+" in BST!");
                 result = true;
                 return result;
             }
