@@ -23,6 +23,13 @@ namespace Binary_Search_Tree
 
             //Print size of Tree to check if all elements have been inserted
             obj.Size();
+
+            //Search a Particular Node using Recursion
+            bool flag=obj.Search(110);
+            if(!flag)
+            {
+                Console.WriteLine("Could not find Data in BST");
+            }
         }
     }
 }

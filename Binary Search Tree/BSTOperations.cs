@@ -12,6 +12,7 @@ namespace Binary_Search_Tree
         int count = 0;
         public T data;
         public BSTOperations<T> left = null, right = null;
+        bool result = false;
 
         public BSTOperations(T data)
         {
@@ -19,7 +20,6 @@ namespace Binary_Search_Tree
             this.left = null;
             this.right = null;
         }
-
 
         //Insert Node in BST
         public void InsertData(T data)
@@ -64,10 +64,36 @@ namespace Binary_Search_Tree
 
             }
         }
+
+        //Print size of BST
         public void Size()
         {
             Console.WriteLine("\nSize of Binary Search Tree is {0}: ", (count + 1));
         }
+        //Search a particular Node
+        public bool Search(T data)
+        {
+            T current = this.data;
 
+            if (current.Equals(data))
+            {
+                Console.WriteLine("Found " + current+" in BST");
+                result = true;
+                return result;
+            }
+            if (data.CompareTo(current) < 0 && this.left!=null)
+            {
+                result=this.left.Search(data);
+            }
+            if (data.CompareTo(current) > 0 && this.right!=null)
+            {
+                result=this.right.Search(data);
+            }
+            if(this.left==null && this.right==null)
+            {
+                result = false;
+            }
+            return result;
+        }
     }
 }
