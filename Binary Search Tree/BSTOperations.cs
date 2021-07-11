@@ -39,7 +39,7 @@ namespace Binary_Search_Tree
                 else
                 {
 
-                    Console.WriteLine("Node-" + count + " " + this.left.data + "->" + this.data + " Go to Left");
+                    Console.WriteLine("\nNode-" + count + " " + this.left.data + "->" + this.data + " Go to Left");
 
                     this.left.InsertData(data);
                 }
@@ -57,12 +57,16 @@ namespace Binary_Search_Tree
                 else
                 {
 
-                    Console.WriteLine("Node-" + count + " " + this.data + "<-" + this.right.data + " Go to Right");
+                    Console.WriteLine("\nNode-" + count + " " + this.data + "<-" + this.right.data + " Go to Right");
 
                     this.right.InsertData(data);
                 }
 
             }
+        }
+        public void Size()
+        {
+            Console.WriteLine("\nSize of Binary Search Tree is {0}: ", (count + 1));
         }
 
     }
